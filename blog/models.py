@@ -18,3 +18,12 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Animal(models.Model):
+    name = models.CharField(max_length=30)
+    sound = models.CharField(max_length=30)
+
+    def speak(self):
+        string = 'The ' + self.name + ' says ' + '"' + self.sound + '"'
+        print(string)
+        return string
